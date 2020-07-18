@@ -1,7 +1,18 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# frozen_string_literal: true
+
+Player.destroy_all
+Establo.destroy_all
+
+NUMBER_OF_ESTABLOS = 4
+PLAYERS_PER_ESTABLO = 20
+
+NUMBER_OF_ESTABLOS.times do
+  establo = Establo.create(name: Faker::Esport.unique.team)
+
+  PLAYERS_PER_ESTABLO.times do
+    establo.players.create(name: Faker::FunnyName.unique.name)
+  end
+end
+
+puts "Created #{Establo.count} Establos."
+puts "Created #{Player.count} PLayers."

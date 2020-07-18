@@ -1,0 +1,2 @@
+class EstabloController < ApplicationController
+end
