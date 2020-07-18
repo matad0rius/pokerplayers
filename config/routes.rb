@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'players/index'
-  get 'players/show'
-  get 'establos/index'
-  get 'establos/show'
+  resources :establos, only: :show
+  resources :players, only: %i[index show]
+
+  root to: 'establos/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
