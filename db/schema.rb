@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_18_210935) do
+ActiveRecord::Schema.define(version: 2020_07_19_095815) do
 
   create_table "establos", force: :cascade do |t|
     t.string "name"
@@ -23,6 +23,9 @@ ActiveRecord::Schema.define(version: 2020_07_18_210935) do
     t.integer "establo_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "number_of_spins"
+    t.decimal "roi"
+    t.integer "total_winnings"
     t.index ["establo_id"], name: "index_players_on_establo_id"
   end
 

@@ -1,7 +1,9 @@
-<h3><%= @establo.name %></h3>
-
 <h4>Players de este establo</h4>
 
 <% @establo.players.each do |player| %>
-  <p><%= link_to player.name, player %></p>
+  <p>
+    <%= link_to player.name, player %>
+    <strong>Number of Spins:</strong>
+    <%= player.number_of_spins %>
+  </p>
 <% end %>
