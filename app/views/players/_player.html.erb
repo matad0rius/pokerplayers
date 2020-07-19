@@ -1,5 +1,12 @@
 <div class="column is-one-third">
   <div class="card player">
+    <% if player.avatar.present? %>
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <%= avatar_tag horse.avatar %>
+        </figure>
+      </div>
+    <% end %>
     <div class="card-content">
       <p class="title is-4">
         <% if name_is_link %>
