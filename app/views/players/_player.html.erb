@@ -1,5 +1,9 @@
 <div class="player">
-  <p><% player.name %></p>
+  <% if name_is_link %>
+    <p><%= link_to player.name, player %></p>
+  <% else %>
+    <p><%= player.name %>
+  <% end %>
   <ul>
     <li>
       <strong>Number of Spins:</strong> <%= player.number_of_spins %>
