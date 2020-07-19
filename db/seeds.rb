@@ -21,3 +21,4 @@ end
 
 puts "Created #{Establo.count} Establos."
 puts "Created #{Player.count} PLayers."
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
