@@ -1,5 +1,9 @@
-<h4>Players de este establo</h4>
+<h3 clas="title is-4"><%= @establo.name %></h3>
 
-<%= render partial: 'players/player',
-                    collection: @establo.players,
-                    locals: { name_is_link: true } %>
+<h4 clas="subtitle is-5">Players de este establo</h4>
+
+<div class="columns is-multiline">
+  <%= render partial: 'players/player',
+                      collection: @establo.players,
+                      locals: { name_is_link: true } %>
+</div>

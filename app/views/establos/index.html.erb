@@ -1,5 +1,7 @@
-<h1>Todos los Establo</h1>
+<h3 class="title is-4">Todos los Establo</h3>
 
-<% @establos.each do |establo| %>
-  <p><%= link_to establo.name, establo %></p>
-<% end %>
+<p>
+  <% @establos.each do |establo| %>
+    <%= link_to establo.name, establo, class: 'button is-link' %>
+  <% end %>
+</p>

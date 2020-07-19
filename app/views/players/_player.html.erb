@@ -1,18 +1,24 @@
-<div class="player">
-  <% if name_is_link %>
-    <p><%= link_to player.name, player %></p>
-  <% else %>
-    <p><%= player.name %>
-  <% end %>
-  <ul>
-    <li>
-      <strong>Number of Spins:</strong> <%= player.number_of_spins %>
-    </li>
-    <li>
-      <strong>Roi:</strong> <%= player.roi %>
-    </li>
-    <li>
-      <strong>Total Winnings:</strong> <%= player.total_winnings %>
-    </li>
-  </ul>
+<div class="column is-one-third">
+  <div class="card player">
+    <div class="card-content">
+      <p class="title is-4">
+        <% if name_is_link %>
+          <p><%= link_to player.name, player %></p>
+        <% else %>
+          <p><%= player.name %>
+        <% end %>
+      </p>
+      <ul>
+        <li>
+          <strong>Number of Spins:</strong> <%= player.number_of_spins %>
+        </li>
+        <li>
+          <strong>Roi:</strong> <%= player.roi %>
+        </li>
+        <li>
+          <strong>Total Winnings:</strong> <%= player.total_winnings %>
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
