@@ -1,0 +1,9 @@
+<p>
+  Tu busqueda para '<%= @query %>' returned <%= pluralize(@players.size, 'result') %>.
+</p>
+
+<div class="columns is-multiline">
+  <%= render partial: 'player',
+             collection: @players,
+             locals: { name_is_link: true } %>
+</div>
