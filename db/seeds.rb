@@ -10,7 +10,12 @@ NUMBER_OF_ESTABLOS.times do
   establo = Establo.create(name: Faker::Esport.unique.team)
 
   PLAYERS_PER_ESTABLO.times do
-    establo.players.create(name: Faker::FunnyName.unique.name)
+    establo.players.create(
+      name: Faker::FunnyName.unique.name,
+      number_of_spins: rand(200..650000).to_i,
+      roi: rand(-10..20),
+      total_winnings: ( rand(-10000..20000) )
+    )
   end
 end
 
